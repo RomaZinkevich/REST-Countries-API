@@ -1,0 +1,8 @@
+.dropdown-content {
+    background-color: white;
+    position: fixed;
+}
+
+.dropdown-content p {
+    cursor: pointer;
+}
