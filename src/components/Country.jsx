@@ -1,3 +1,5 @@
+import '../styles/country.css'
+
 const Country = ({country}) => {
   return (
     <div className="country">

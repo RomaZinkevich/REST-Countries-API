@@ -1,4 +1,5 @@
 import Country from "./Country"
+import '../styles/countries.css'
 
 const Countries = ({data}) => {
   return (

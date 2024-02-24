@@ -1,0 +1,26 @@
+header {
+    display: flex;
+    margin-bottom: 10rem;
+    background-color: white;
+    padding: 2rem 5rem;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 3px 0 5px gray;
+  }
+
+  .mode-switch {
+    display: flex;
+    font-weight: 700;
+    font-size: 20px;
+    margin-right: 1rem;
+  }
+
+  .mode-switch img{
+    margin-right: 10px;
+    width: 18px;
+  }
+
+  h1 {
+    font-weight: 900;
+  }
