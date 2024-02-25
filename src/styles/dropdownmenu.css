@@ -1,4 +1,4 @@
-.dropdown * {
+.dropdown > * {
     width: 200px;
 }
 
@@ -9,4 +9,12 @@
     border-radius: 0.3rem;
     box-shadow: 1px 1px 5px gray;
     font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.dropbtn svg {
+    margin-top: 2px;
+    width: 20px;
 }

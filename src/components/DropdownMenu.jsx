@@ -1,6 +1,8 @@
 import '../styles/dropdownmenu.css'
 import { useState } from 'react'
 import DropdownContent from './DropdownContent'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
 
 const DropdownMenu = ({filterClick}) => {
   const [open, setOpen] = useState(false)
@@ -18,7 +20,10 @@ const DropdownMenu = ({filterClick}) => {
 
   return (
     <div className="dropdown">
-        <p className="dropbtn" onClick={toggleMenu}>{btnTitle}</p>
+      <div className="dropbtn" onClick={toggleMenu}>
+        <p>{btnTitle}</p>
+        <FontAwesomeIcon icon={faCaretDown} />
+      </div>
         { open && <DropdownContent itemClick={dropdownClick}/>}
     </div>
   )
