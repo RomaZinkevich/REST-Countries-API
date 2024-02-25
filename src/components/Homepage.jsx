@@ -23,7 +23,7 @@ function App() {
 
   //Fetching data from API
   const fetchCountries = async (link) => {
-    link = "https://restcountries.com/v3.1/" + link
+    link = `https://restcountries.com/v3.1/${link}`
     const res = await fetch(link)
     const data = await res.json()
 

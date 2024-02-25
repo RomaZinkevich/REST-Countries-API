@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom"
 import '../styles/country.css'
 
 const Country = ({country}) => {
+  let id = country.ccn3
   return (
-    <div className="country">
+    <Link to={`/country/${id}`} className="country">
       <img src={country.flags.png} alt="" />
       <div className="country-info">
         <h2>{country.name["common"]}</h2>
@@ -10,7 +12,7 @@ const Country = ({country}) => {
         <div> <p>Region:</p> {country.region} </div>
         <div> <p>Capital:</p> {country.capital} </div>
       </div>
-    </div>
+    </Link>
   )
 }
 
