@@ -18,7 +18,7 @@ const DropdownMenu = ({filterClick}) => {
 
   return (
     <div className="dropdown">
-        <button className="dropbtn" onClick={toggleMenu}>{btnTitle}</button>
+        <p className="dropbtn" onClick={toggleMenu}>{btnTitle}</p>
         { open && <DropdownContent itemClick={dropdownClick}/>}
     </div>
   )

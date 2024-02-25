@@ -1,0 +1,12 @@
+.dropdown * {
+    width: 200px;
+}
+
+.dropbtn {
+    cursor: pointer;
+    background-color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 0.3rem;
+    box-shadow: 1px 1px 5px gray;
+    font-weight: 700;
+}

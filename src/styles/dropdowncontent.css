@@ -1,8 +1,14 @@
 .dropdown-content {
-    background-color: white;
+    margin-top: 0.3rem;
     position: fixed;
+    background-color: white;
+    padding: 1rem 1.5rem 0.5rem 1.5rem;
+    border-radius: 0.3rem;
+    box-shadow: 1px 1px 5px gray;
+    font-weight: 700;
 }
 
 .dropdown-content p {
     cursor: pointer;
+    padding-bottom: 0.5rem;
 }
