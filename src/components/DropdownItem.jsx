@@ -1,6 +1,6 @@
-const DropdownItem = ({title, click}) => {
+const DropdownItem = ({itemClick, title}) => {
   return (
-    <p onClick={()=>click(title)}>{title}</p>
+    <p onClick={()=>itemClick(title)}>{title}</p>
   )
 }
 
