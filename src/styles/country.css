@@ -3,7 +3,7 @@
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   border-radius: 10px;
-  box-shadow: 2px 2px 10px gray;
+  box-shadow: 2px 2px 10px rgb(226, 224, 224);
   cursor: pointer;
 }
 

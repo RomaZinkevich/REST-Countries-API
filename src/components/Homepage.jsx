@@ -8,6 +8,8 @@ function App() {
   const [searchText, setSearchText] = useState("")
   const [loading, setLoading] = useState(true)
 
+  let content;
+
   useEffect(() => {
     const getCountries = async () => {
       setLoading(true)
@@ -45,13 +47,16 @@ function App() {
     setLoading(false)
   }
 
+  if (loading) content="Loading..."
+  else if (countries.status) content="No countries found ;<"
+  else content = <Countries className="container" data={countries}/>
 
   return (
     <div>
         <Header />
         <div className="container">
           <Filtering filterClick={filterClick} searchClick={searchCountry}></Filtering>
-          {!loading ? <Countries className="container" data={countries}/> : "Loading..."}
+          {content}
         </div>
     </div>
   )
