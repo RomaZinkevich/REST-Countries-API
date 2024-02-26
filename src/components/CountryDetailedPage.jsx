@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from "react"
+import { useNavigate } from 'react-router-dom';
 import Header from "./Header"
 import BackButton from './BackButton'
 import CountryDetails from './CountryDetails'
@@ -9,7 +10,12 @@ const CountryDetailedPage = () => {
   const [ country, setCountry ] = useState([])
   const [ loading, setLoading ] = useState(true)
   const [ borders, setBorders ] = useState([])
+  const navigate = useNavigate();
   let content
+
+  const backButtonHandler = () => {
+    navigate(-1)
+  }
 
   useEffect(() => {
     const getBorders = async (country) => {
@@ -54,7 +60,7 @@ const CountryDetailedPage = () => {
     <>
       <Header />
       <div className="container">
-        <BackButton />
+        <BackButton btnHandler={backButtonHandler}/>
         {content}
       </div>
     </>
