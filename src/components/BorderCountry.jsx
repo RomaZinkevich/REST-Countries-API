@@ -1,8 +1,8 @@
-import React from 'react'
+import '../styles/bordercountry.css'
 
 const BorderCountry = ({title}) => {
   return (
-    <div>{title}</div>
+    <div className='bordered-country'>{title}</div>
   )
 }
 

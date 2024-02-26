@@ -39,15 +39,14 @@ const CountryDetails = ({country, borders}) => {
                     </div>
                 </div>
             </div>
-            <div className="border-countries">
+            {borders.length>0 && (<div className="border-countries">
                 <p>Border Countries:</p>
                 {borders.map(el=>{
-                    return  (<Link to={`/country/${el.id}`}>
+                    return  (<div key={el.id}><Link to={`/country/${el.id}`}>
                         <BorderCountry title={el.title} />
-                    </Link>)
+                    </Link></div>)
                 })}
-
-            </div>
+            </div>)}
         </div>
     </div>
   )

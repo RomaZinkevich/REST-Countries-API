@@ -35,3 +35,8 @@
     font-weight: 700;
     display: inline;
 }
+
+.border-countries {
+    display: flex;
+    align-items: center;
+}

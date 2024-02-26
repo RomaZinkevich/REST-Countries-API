@@ -19,6 +19,7 @@ const CountryDetailedPage = () => {
 
   useEffect(() => {
     const getBorders = async (country) => {
+      if (! country.borders) return
       let borderedCountries = await country.borders.map(async (element) => {
         let country = await fetchCountry(element)
         return {
@@ -54,7 +55,7 @@ const CountryDetailedPage = () => {
 
   if (loading) content="Loading..."
   else if (country.status===404) content="No countries found ;<"
-  else content = <h1>{<CountryDetails country={country} borders={borders}/>}</h1>
+  else content = <>{<CountryDetails country={country} borders={borders ? borders : null}/>}</>
 
   return (
     <>
