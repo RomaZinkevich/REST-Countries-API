@@ -1,7 +1,7 @@
 import { RouterProvider } from 'react-router-dom';
 import { createBrowserRouter} from 'react-router-dom'
 import Homepage from "./components/Homepage"
-import CountryDetailed from './components/CountryDetailed';
+import CountryDetailedPage from './components/CountryDetailedPage';
 
 const router = createBrowserRouter([
   {
@@ -10,7 +10,7 @@ const router = createBrowserRouter([
   },
   {
     path:"/country/:id",
-    element:<CountryDetailed />
+    element:<CountryDetailedPage />
   }
 ])
 
