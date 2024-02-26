@@ -9,7 +9,7 @@ const router = createBrowserRouter([
     element: <Homepage />,
   },
   {
-    path:"/country/:id",
+    path:"/country/:id?",
     element:<CountryDetailedPage />
   }
 ])
