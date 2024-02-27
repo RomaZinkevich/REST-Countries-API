@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -17,9 +16,28 @@ body {
   margin: auto;
 }
 
+.main-container{
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100%;
+}
+
+.main-container.light {
+  background-color: #fafafa;
+  color:black
+}
+
+.main-container.dark {
+  background-color: #202c37;
+  color: white;
+}
+
 a {
   text-decoration: none;
   color: black;
 }
 
 
+* {
+  transition: background-color 0.1s linear, color 0.1s linear, box-shadow 0.1s linear;
+}

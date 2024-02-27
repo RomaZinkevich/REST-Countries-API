@@ -10,6 +10,7 @@ const CountryDetailedPage = () => {
   const [ country, setCountry ] = useState([])
   const [ loading, setLoading ] = useState(true)
   const [ borders, setBorders ] = useState([])
+  const [ theme, setTheme ] = useState("light")
   const navigate = useNavigate();
   let content
 
@@ -40,6 +41,8 @@ const CountryDetailedPage = () => {
       setLoading(false)
     }
 
+    let currentTheme = localStorage.getItem("theme")
+    if (currentTheme) setTheme(currentTheme)
     getCountry()
   }, [id])
 
@@ -53,18 +56,24 @@ const CountryDetailedPage = () => {
     return data[0]
   }
 
+  const toggleTheme = () => {
+    let currentTheme = theme === "light" ? "dark" : "light"
+    setTheme(currentTheme)
+    localStorage.setItem('theme', currentTheme);
+  }
+
   if (loading) content="Loading..."
   else if (country.status===404) content="No countries found ;<"
   else content = <>{<CountryDetails country={country} borders={borders ? borders : null}/>}</>
 
   return (
-    <>
-      <Header />
-      <div className="container">
+    <div className={`main-container ${theme}`}>
+      <Header className={theme} themeSwitch={toggleTheme}/>
+      <div className={`container ${theme}`}>
         <BackButton btnHandler={backButtonHandler}/>
         {content}
       </div>
-    </>
+    </div>
   )
 }
 

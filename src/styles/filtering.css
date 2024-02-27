@@ -3,3 +3,19 @@
     justify-content: space-between;
     align-items: center;
 }
+
+.filtering.light *{
+    color: black;
+    background-color: white;
+}
+
+.filtering.dark *{
+    background-color: #2b3945;
+    color:white
+}
+
+@media(max-width:700px){
+    .filtering{
+        flex-direction: column;
+    }
+  }

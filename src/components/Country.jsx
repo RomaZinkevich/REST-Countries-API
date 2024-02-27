@@ -4,7 +4,7 @@ import '../styles/country.css'
 const Country = ({country}) => {
   let id = country.ccn3
   return (
-    <Link to={`/country/${id}`} className="country">
+    <Link to={`/REST-Countries-API/country/${id}`} className="country">
       <img src={country.flags.png} alt="" />
       <div className="country-info">
         <h2>{country.name["common"]}</h2>

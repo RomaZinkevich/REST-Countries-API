@@ -7,6 +7,7 @@ function App() {
   const [countries, setCountries] = useState([])
   const [searchText, setSearchText] = useState("")
   const [loading, setLoading] = useState(true)
+  const [theme, setTheme] = useState("light")
 
   let content;
 
@@ -18,6 +19,8 @@ function App() {
       setLoading(false)
     }
 
+    let currentTheme = localStorage.getItem("theme")
+    if (currentTheme) setTheme(currentTheme)
     getCountries()
   }, [])
 
@@ -47,15 +50,21 @@ function App() {
     setLoading(false)
   }
 
+  const toggleTheme = () => {
+    let currentTheme = theme === "light" ? "dark" : "light"
+    setTheme(currentTheme)
+    localStorage.setItem('theme', currentTheme);
+  }
+
   if (loading) content="Loading..."
   else if (countries.status) content="No countries found ;<"
-  else content = <Countries className="container" data={countries}/>
+  else content = <Countries className={theme} data={countries}/>
 
   return (
-    <div>
-        <Header />
+    <div className={`main-container ${theme}`}>
+        <Header className={theme} themeSwitch={toggleTheme}/>
         <div className="container">
-          <Filtering filterClick={filterClick} searchClick={searchCountry}></Filtering>
+          <Filtering className={theme} filterClick={filterClick} searchClick={searchCountry}></Filtering>
           {content}
         </div>
     </div>

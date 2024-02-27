@@ -1,9 +1,9 @@
 import Country from "./Country"
 import '../styles/countries.css'
 
-const Countries = ({data}) => {
+const Countries = ({className, data}) => {
   return (
-    <div className="countries">
+    <div className={`countries ${className}`}>
       {data.map((item, index) =>
         (<Country key={index} country={item}/>)
       )}

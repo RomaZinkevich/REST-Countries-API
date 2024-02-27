@@ -42,7 +42,7 @@ const CountryDetails = ({country, borders}) => {
             {borders.length>0 && (<div className="border-countries">
                 <p>Border Countries:</p>
                 {borders.map(el=>{
-                    return  (<div key={el.id}><Link to={`/country/${el.id}`}>
+                    return  (<div key={el.id}><Link to={`/REST-Countries-API/country/${el.id}`}>
                         <BorderCountry title={el.title} />
                     </Link></div>)
                 })}

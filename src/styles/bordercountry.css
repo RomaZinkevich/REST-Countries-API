@@ -5,3 +5,16 @@
     font-size: 15px;
     border-radius: 0.5rem;
 }
+
+.dark .bordered-country {
+    box-shadow: 2px 2px 10px rgb(22,22,22);
+    color: white;
+    background-color: #2b3945;
+}
+
+
+@media(max-width:700px){
+    .bordered-country {
+        margin: 0.5rem 0;
+    }
+}

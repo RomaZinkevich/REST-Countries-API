@@ -3,7 +3,6 @@
     background-color: white;
     padding: 0.8rem 2rem;
     border-radius: 0.5rem;
-    box-shadow: 2px 2px 10px rgb(202, 199, 199);
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -14,7 +13,6 @@
 }
 
 .btn button {
-    background-color: white;
     border: none;
     margin-left: 0.8rem;
     font-size: 15px;
@@ -22,3 +20,24 @@
     cursor: pointer;
 }
 
+.light .btn {
+    background-color: white;
+    color: black;
+    box-shadow: 2px 2px 10px rgb(202, 199, 199);
+}
+
+.dark .btn {
+    background-color: #2b3945;
+    color: white;
+    box-shadow: 2px 2px 10px rgb(22,22,22);
+}
+
+.dark .btn button {
+    background-color: #2b3945;
+    color: white;
+}
+
+.light .btn button {
+    background-color: white;
+    color: black;
+}

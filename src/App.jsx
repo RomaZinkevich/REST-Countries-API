@@ -5,11 +5,11 @@ import CountryDetailedPage from './components/CountryDetailedPage';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/REST-Countries-API",
     element: <Homepage />,
   },
   {
-    path:"/country/:id?",
+    path:"/REST-Countries-API/country/:id?",
     element:<CountryDetailedPage />
   }
 ])

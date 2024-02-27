@@ -7,14 +7,27 @@
     background-color: white;
     padding: 1rem 1.5rem;
     border-radius: 0.3rem;
-    box-shadow: 2px 2px 10px rgb(226, 224, 224);
     font-weight: 700;
     display: flex;
     justify-content: space-between;
     text-align: center;
 }
 
+.light .dropbtn {
+    box-shadow: 2px 2px 10px rgb(226, 224, 224);
+}
+
+.dark .dropbtn {
+    box-shadow: 2px 2px 10px rgb(22,22,22);
+}
+
 .dropbtn svg {
     margin-top: 2px;
     width: 20px;
+}
+
+@media(max-width:700px){
+    .dropdown > * {
+        width: 230px;
+    }
 }
