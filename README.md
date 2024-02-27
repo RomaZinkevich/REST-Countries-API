@@ -1,8 +1,15 @@
-# React + Vite
+# REST Countries API
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Deployment
 
-Currently, two official plugins are available:
+The app is deployed and can be accessed [here](https://github.com/RomaZinkevich/REST-Countries-API).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Data Source
+
+The app fetches country information from [Data Source API](https://restcountries.com).
+
+## Built With
+
+- [Vite](https://vitejs.dev/) - Frontend build tool
+- [React](https://reactjs.org/) - JavaScript library for building user interfaces
+
